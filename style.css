@@ -178,7 +178,7 @@ button#select-image {
 
 /* Efecto hover para el botón de seleccionar imagen */
 button#select-image:hover {
-  background-color: #2980b9;
+  background-color: hsl(118, 73%, 53%);
   transform: translateY(-2px);
 }
 
