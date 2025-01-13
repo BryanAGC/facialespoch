@@ -1,49 +1,190 @@
+/* Reset global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f9f9f9;
-  }
-  
+  background-color: #f7f7f7;
+  color: #4f4f4f;
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 40px 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  color: #2d2d2d;
+}
+
+/* Contenedor central */
+.container {
+  width: 85%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Encabezado */
+header {
+  background-color: #ffffff;
+  padding: 40px 0;
+  border-bottom: 2px solid #e5e5e5;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 36px;
+  text-align: center;
+  color: #3498db;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+header p {
+  text-align: center;
+  color: #7f8c8d;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+/* Formularios */
+form {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+form input[type="file"] {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease;
+}
+
+form input[type="file"]:focus {
+  border-color: #3498db;
+}
+
+form button {
+  background-color: #3498db;
+  color: white;
+  padding: 16px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+/* Sección de resultados */
+.results {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+  transition: box-shadow 0.3s ease;
+}
+
+.results h2 {
+  color: #3498db;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.results p {
+  color: #7f8c8d;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.results img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Efectos de hover */
+.results:hover {
+  box-shadow: 0 6px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Pie de página */
+footer {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+footer a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
   .container {
-    text-align: center;
-    padding: 20px;
-    background: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    width: 95%;
   }
-  
-  form {
-    margin-bottom: 20px;
+
+  header h1 {
+    font-size: 28px;
   }
-  
-  input[type="file"] {
-    margin-bottom: 10px;
+
+  form input[type="file"], form button {
+    font-size: 14px;
   }
-  
-  button {
-    padding: 10px 20px;
-    background: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background: #0056b3;
-  }
-  
-  #results {
-    margin-top: 20px;
-  }
-  
-  #processed-image {
-    max-width: 100%;
-    margin-top: 20px;
-  }
-  
+}
+/* Estilo para el botón de seleccionar imagen */
+button#select-image {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+}
+
+/* Efecto hover para el botón de seleccionar imagen */
+button#select-image:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+/* Efecto cuando el botón de seleccionar imagen es presionado */
+button#select-image:active {
+  transform: translateY(2px);
+  background-color: #1f70a4;
+}
+
